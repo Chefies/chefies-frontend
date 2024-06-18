@@ -35,5 +35,6 @@ jobs:
           username: ${{ secrets.DEPLOYMENT_HOST_USERNAME }}
           key: ${{ secrets.DEPLOYMENT_HOST_KEY }}
           port: 22
-          source: dist/
+          source: dist/*
           target: /var/www/html/
+          strip_components: 1
