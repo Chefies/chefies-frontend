@@ -1,0 +1,35 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build Static Files
+        run: |
+          pnpm install
+          pnpm build
+      - name: Delete Past Version Files
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.DEPLOYMENT_HOST }}
+          username: ${{ secrets.DEPLOYMENT_HOST_USERNAME }}
+          key: ${{ secrets.DEPLOYMENT_HOST_KEY }}
+          port: 22
+          script: |
+            rm -rf /var/www/html/*
+      - name: Send Files to Server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.DEPLOYMENT_HOST }}
+          username: ${{ secrets.DEPLOYMENT_HOST_USERNAME }}
+          key: ${{ secrets.DEPLOYMENT_HOST_KEY }}
+          port: 22
+          source: dist/
+          target: /var/www/html/
