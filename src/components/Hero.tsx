@@ -1,3 +1,4 @@
+import { IoMdDownload } from "react-icons/io";
 import phoneImage from "../assets/phone.png";
 
 function Hero() {
@@ -8,15 +9,15 @@ function Hero() {
       </div>
 
       <div className="flex flex-col md:justify-center md:text-end uppercase gap-4 max-w-lg">
-        <strong className="text-3xl">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </strong>
+        <strong className="text-3xl">Chef in emergency situations</strong>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor
-          pellentesque convallis. Nullam sit amet euismod lorem.
+          Whether you have limited ingredients, or simply want to discover new
+          recipes with the ingredients you have, we got it covered!
         </p>
-        <button className="bg-primary text-white px-16 py-4 w-fit rounded-2xl ml-auto uppercase">
-          Download
+        <p>Powered by Gemini.</p>
+        <button className="bg-primary text-white px-16 py-4 w-fit rounded-2xl ml-auto uppercase flex gap-2 items-center justify-center">
+          <IoMdDownload className="w-6 h-6" />
+          <p className="pt-1 font-bold">Download</p>
         </button>
       </div>
     </div>
