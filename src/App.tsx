@@ -14,7 +14,10 @@ function App() {
       </div>
       <Features />
 
-      <div className="relative overflow-hidden p-4 pt-44 -mt-16">
+      <div
+        className="relative overflow-hidden p-4 pt-44 -mt-16"
+        id="screenshots"
+      >
         <div className="absolute top-24 -left-40 -right-16 md:-bottom-16 bottom-0 md:rotate-3 bg-secondary -z-20" />
         <Screenshots />
       </div>
