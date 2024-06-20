@@ -12,9 +12,9 @@ function Hero() {
         <strong className="text-3xl">Chef in emergency situations</strong>
         <p>
           Whether you have limited ingredients, or simply want to discover new
-          recipes with the ingredients you have, we got it covered!
+          healthy recipes with the ingredients you have, we got it covered!
         </p>
-        <p>Powered by Gemini.</p>
+        <p>Powered by AI.</p>
         <button className="bg-primary text-white px-16 py-4 w-fit rounded-2xl ml-auto uppercase flex gap-2 items-center justify-center">
           <IoMdDownload className="w-6 h-6" />
           <p className="pt-1 font-bold">Download</p>
