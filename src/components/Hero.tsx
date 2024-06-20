@@ -18,7 +18,7 @@ function Hero() {
         <button
           className="bg-primary text-white px-16 py-4 w-fit rounded-2xl ml-auto uppercase flex gap-2 items-center justify-center"
           onClick={() => {
-            window.open("https://sendgb.com/jEgcfze9BtC", "_blank")
+            window.open("https://github.com/Chefies/chefies-mobile/releases", "_blank")
           }}
         >
           <IoLogoAndroid className="w-6 h-6" />
