@@ -1,5 +1,8 @@
 import { useState } from "react";
-import phoneImage from "../assets/phone.png";
+import takePhotoImage from "../assets/take-photo.png";
+import verifyIngredientsImage from "../assets/verify-ingredients.png";
+import getSuggestionsImage from "../assets/get-suggestions.png";
+import saveRecipesImage from "../assets/save-recipes.png";
 import Step from "./Step";
 import { LuChevronLeftCircle, LuChevronRightCircle } from "react-icons/lu";
 
@@ -15,20 +18,36 @@ function Features() {
 
         {currentIdx == 0 && (
           <Step
-            image={phoneImage}
+            image={takePhotoImage}
             description="Take a picture of your ingredients"
           />
         )}
 
         {currentIdx == 1 && (
           <Step
-            image={phoneImage}
-            description="Find healthy recipes for available ingredients"
+            image={verifyIngredientsImage}
+            description="Verify detected ingredients"
             className={currentIdx == 1 ? "opacity-100" : "opacity-0"}
           />
         )}
+        
+        {currentIdx == 2 && (
+          <Step
+            image={getSuggestionsImage}
+            description="Find healthy recipes for available ingredients"
+            className={currentIdx == 2 ? "opacity-100" : "opacity-0"}
+          />
+        )}
+        
+        {currentIdx == 3 && (
+          <Step
+            image={saveRecipesImage}
+            description="Save interesting recipes"
+            className={currentIdx == 3 ? "opacity-100" : "opacity-0"}
+          />
+        )}
 
-        <button onClick={() => setIdx(Math.min(currentIdx + 1, 1))}>
+        <button onClick={() => setIdx(Math.min(currentIdx + 1, 3))}>
           <LuChevronRightCircle className="w-12 h-12" />
         </button>
       </div>
